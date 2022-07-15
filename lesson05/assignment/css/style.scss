@@ -1,6 +1,13 @@
+//variable for Google Awesome body font
 $fontstyle: 'Raleway', sans-serif;
+//variable for responsive design font size
+//iPhone 12
 $iphonefontsize: 8vw;
+//MacBook Pro
 $desktopfontsize: 1.5vw;
+//variable for header and footer background colors
+$backgroundcolor: #f6f8f5;
+//CSS grid
 body {
   display: grid;
   font-family: $fontstyle;
@@ -8,7 +15,6 @@ body {
 main {
   display: flex;
   flex-direction: row;
-
   justify-content: flex-end;
 }
 nav {
@@ -16,7 +22,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   font-size: $desktopfontsize;
-  background-color: #f6f8f5;
+  background-color: $backgroundcolor;
 }
 a {
   text-decoration: none;
@@ -31,7 +37,7 @@ footer {
   flex-direction: row;
   justify-content: center;
 }
-
+//iphone media query
 @media screen and (max-width: 390px) {
   body {
     font-style: $fontstyle;
@@ -41,7 +47,7 @@ footer {
   }
   nav {
     padding: 9vw;
-    background-color: #f6f8f5;
+    background-color: $backgroundcolor;
     font-size: 10vw;
   }
   img {
@@ -51,7 +57,7 @@ footer {
   }
   footer {
     font-size: $iphonefontsize;
-    background-color: #f6f8f5;
+    background-color: $backgroundcolor;
   }
   .process {
     width: 60%;
@@ -62,6 +68,7 @@ footer {
     margin-bottom: 30vw;
   }
 }
+//Desktop (MacBook Pro) media query
 @media screen and (min-width: 2880px) {
   header {
   font-size: $desktopfontsize;
@@ -70,7 +77,7 @@ footer {
     grid-row-start: 6;
     grid-row-end: 7;
     font-size: $desktopfontsize;
-    background-color: #f6f8f5;
+    background-color: $backgroundcolor;
   }
   body {
     display: grid;
@@ -85,7 +92,7 @@ footer {
     justify-content: space-around;
     align-items: center;
     font-size: $desktopfontsize;
-    background-color: #f6f8f5;
+    background-color: $backgroundcolor;
   }
   aside {
     display: flex;
