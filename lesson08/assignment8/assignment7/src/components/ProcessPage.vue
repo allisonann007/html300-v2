@@ -2,7 +2,7 @@
 
 <div id="app">
   <!--  <img  v-bind:key="item" :src="require('../assets/' + item + '.jpg')" width="500">-->
-  <ImageMarkup :title="item.title" :alt="item.alt" :src="item_src" v-for="(item,id) in images" :key="id" />
+  <ImageMarkup :title="item.title" :alt="item.alt" :src="item.src" v-for="(item,id) in images" :key="id" />
 </div>
 </template>
 <!--The image component should have props for at least the image src, alt, & title attributes, use prop validation.-->
@@ -19,17 +19,17 @@ export default {
       images: [{
           title: 'processOne',
           alt: 'two women blowing glass with furnace',
-          src: './processOne.jpg'
+          src: '/assets/processOne.jpg'
         },
         {
           title: 'processTwo',
           alt: 'woman blowing glass',
-          src: './processTwo.jpg'
+          src: '/assets/processTwo.jpg'
         },
         {
           title: 'processThree',
           alt: 'two woman blowing glass at bench',
-          src: './processThree.jpg'
+          src: '/assets/processThree.jpg'
         }
       ]
     }

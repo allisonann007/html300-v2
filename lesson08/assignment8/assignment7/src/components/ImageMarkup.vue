@@ -1,7 +1,7 @@
 <template>
 <div>{{ src }}
   <div v-on:click="clicked()" v-bind:class="{addBorder:drawBorder}">
-    <img :src="src" :alt="alt">
+    <img :src="importSrc(title)" :alt="alt">
   </div>
 </div>
 </template>
@@ -13,7 +13,10 @@ import mixin from './../mixins/mixin'
 export default {
   data() {
     return {
-      drawBorder: false
+      drawBorder: false,
+      importSrc: function (title) {
+        return require('@/assets/' + title + '.jpg')
+      },
     }
   },
   props: {
